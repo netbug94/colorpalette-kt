@@ -13,7 +13,7 @@ fun parseColor(input: String): Color {
     }
 }
 
-//////////////////////////////
+////////////////////////////// Other stuff from this point
 fun readTiFileA0(): String {
     return try {
         val file0 = File(COL_PAThA0).readText()
