@@ -32,7 +32,7 @@ fun columnBoxesA() {
         }
     }
 
-    Column( modifier = Modifier.padding(12.dp),
+    Column( modifier = Modifier.padding(5.dp).fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -40,7 +40,7 @@ fun columnBoxesA() {
 ////////////////////////////// Box A0
         Box( modifier = Modifier
             .weight(1f)
-            .aspectRatio(1.5f)
+            //.aspectRatio(1.5f)
             .background((loadedColorA0), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -86,7 +86,7 @@ fun columnBoxesA() {
         }
         Box( modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1.5f)
+                //.aspectRatio(1.5f)
                 .background((loadedColorA1), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -137,7 +137,7 @@ fun columnBoxesA() {
         Box(
             modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1.5f)
+                //.aspectRatio(1.5f)
                 .background((loadedColorA2), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -188,7 +188,7 @@ fun columnBoxesA() {
         Box(
             modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1.5f)
+                //.aspectRatio(1.5f)
                 .background((loadedColorA3), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {

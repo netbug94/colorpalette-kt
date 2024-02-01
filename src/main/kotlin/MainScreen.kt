@@ -6,9 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import custom_resources.ErgoGray
 import dynamic_boxes.columnBoxesA
-
-@Composable
-fun mainScnSpacer() { Spacer(modifier = Modifier.width(15.dp)) }
+import engine_logic.dynBxsSpacerWidth
 
 @Composable
 fun mainScreen() {
@@ -18,16 +16,14 @@ fun mainScreen() {
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically) {
 
+            dynBxsSpacerWidth()
             Column(modifier = Modifier.weight(1f)) { columnBoxesA()
             }
-            mainScnSpacer()
-            Column(modifier = Modifier.weight(1f)) {
+            Spacer(modifier = Modifier.width(0.dp))
 
+            Column(modifier = Modifier.weight(1f)) {columnBoxesA()
             }
-            mainScnSpacer()
-            Column(modifier = Modifier.weight(1f)) {
-
-            }
+            dynBxsSpacerWidth()
         }
     }
 }
