@@ -13,20 +13,27 @@ import engine_logic.dynBxsSpacerWidth
 
 @Composable
 fun mainScreen() {
-    Box(modifier = Modifier.fillMaxSize().background(ErgoGray)) {
+    Column(modifier = Modifier.fillMaxSize().background(ErgoGray)) {
 
-        Row(modifier = Modifier.fillMaxSize(),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically) {
+        Column(modifier = Modifier.weight(1f)) { lockSwitch()
 
-            dynBxsSpacerWidth()
-            Column(modifier = Modifier.weight(1f)) { columnBoxesA()
+            Row(
+                modifier = Modifier.fillMaxSize(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+
+                dynBxsSpacerWidth()
+                Column(modifier = Modifier.weight(1f)) {
+                    columnBoxesA()
+                }
+                Spacer(modifier = Modifier.width(0.dp))
+
+                Column(modifier = Modifier.weight(1f)) {
+                    columnBoxesB()
+                }
+                dynBxsSpacerWidth()
             }
-            Spacer(modifier = Modifier.width(0.dp))
-
-            Column(modifier = Modifier.weight(1f)) {columnBoxesB()
-            }
-            dynBxsSpacerWidth()
         }
     }
 }
