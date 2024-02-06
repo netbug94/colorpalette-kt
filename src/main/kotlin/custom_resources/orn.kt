@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 
 @Composable
-fun hdiScn(wmk: String) {
+fun ornScn(wmk: String) {
     Box(modifier = Modifier.fillMaxSize()) {
 
         Text(

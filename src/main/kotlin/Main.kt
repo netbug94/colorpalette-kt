@@ -1,10 +1,10 @@
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
-import custom_resources.hdiScn
+import custom_resources.ornScn
 
 fun main() = application {
     Window(onCloseRequest = ::exitApplication) {
         mainScreen()
-        hdiScn("\uD83C\uDF35hdi\uD83C\uDF35")
+        ornScn("\uD83C\uDF35orn")
     }
 }
