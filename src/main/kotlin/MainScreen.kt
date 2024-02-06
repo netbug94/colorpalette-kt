@@ -6,6 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import custom_resources.ErgoGray
 import dynamic_boxes.columnBoxesA
+import dynamic_boxes.columnBoxesB
 import engine_logic.dynBxsSpacerWidth
 
 @Composable
@@ -21,7 +22,7 @@ fun mainScreen() {
             }
             Spacer(modifier = Modifier.width(0.dp))
 
-            Column(modifier = Modifier.weight(1f)) {columnBoxesA()
+            Column(modifier = Modifier.weight(1f)) {columnBoxesB()
             }
             dynBxsSpacerWidth()
         }

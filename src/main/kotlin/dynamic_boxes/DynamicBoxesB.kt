@@ -15,20 +15,21 @@ import androidx.compose.ui.unit.dp
 import engine_logic.*
 import java.io.File
 
+////////////////////////////// Dynamic boxes B
 @Composable
-fun columnBoxesA() {
-    var loadedColorA0 by remember { mutableStateOf(Color(0xFF303030)) }
-    var userInputA0 by remember { mutableStateOf("") }
+fun columnBoxesB() {
+    var loadedColorB0 by remember { mutableStateOf(Color(0xFF303030)) }
+    var userInputB0 by remember { mutableStateOf("") }
 
     LaunchedEffect(Unit) {
-        val file = File(COL_PAThA0)
+        val file = File(COL_PAThB0)
         if (!file.exists()) {
             val directory = File(file.parent)
             directory.mkdirs()
         }
         if (file.exists()) {
             val savedColorCode = file.readText()
-            loadedColorA0 = parseColor(savedColorCode)
+            loadedColorB0 = parseColor(savedColorCode)
         }
     }
 
@@ -37,22 +38,22 @@ fun columnBoxesA() {
         verticalArrangement = Arrangement.Center
     ) {
 
-////////////////////////////// Box A0
+////////////////////////////// Box B0
         Box( modifier = Modifier
             .weight(1f)
             //.aspectRatio(1.5f)
-            .background((loadedColorA0), shape = AbsoluteRoundedCornerShape(5.dp)),
+            .background((loadedColorB0), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
             Column( modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                TextField( value = userInputA0,
+                TextField( value = userInputB0,
                     onValueChange = {
-                        userInputA0 = it
-                        loadedColorA0 = parseColor(it)
-                        val file = File(COL_PAThA0)
+                        userInputB0 = it
+                        loadedColorB0 = parseColor(it)
+                        val file = File(COL_PAThB0)
                         file.writeText(it) },
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
@@ -62,32 +63,32 @@ fun columnBoxesA() {
                         .background(Color.Transparent),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text( text = readTiFileA0().ifEmpty { "0xFF303030" },
+                        Text( text = readTiFileB0().ifEmpty { "0xFF303030" },
                             color = Color.White, textAlign = TextAlign.Center)
-                        }
+                    }
                     }
                 )
             }
         }
-////////////////////////////// Box A1
-        var loadedColorA1 by remember { mutableStateOf(Color(0xFF303030)) }
-        var userInputA1 by remember { mutableStateOf("") }
+////////////////////////////// Box B1
+        var loadedColorB1 by remember { mutableStateOf(Color(0xFF303030)) }
+        var userInputB1 by remember { mutableStateOf("") }
 
         LaunchedEffect(Unit) {
-            val file = File(COL_PAThA1)
+            val file = File(COL_PAThB1)
             if (!file.exists()) {
                 val directory = File(file.parent)
                 directory.mkdirs()
             }
             if (file.exists()) {
                 val savedColorCode = file.readText()
-                loadedColorA1 = parseColor(savedColorCode)
+                loadedColorB1 = parseColor(savedColorCode)
             }
         }
         Box( modifier = Modifier
-                .weight(1f)
-                //.aspectRatio(1.5f)
-                .background((loadedColorA1), shape = AbsoluteRoundedCornerShape(5.dp)),
+            .weight(1f)
+            //.aspectRatio(1.5f)
+            .background((loadedColorB1), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
             Column( modifier = Modifier.fillMaxSize(),
@@ -95,11 +96,11 @@ fun columnBoxesA() {
                 verticalArrangement = Arrangement.Center
             ) {
                 TextField(
-                    value = userInputA1,
+                    value = userInputB1,
                     onValueChange = {
-                        userInputA1 = it
-                        loadedColorA1 = parseColor(it)
-                        val file = File(COL_PAThA1)
+                        userInputB1 = it
+                        loadedColorB1 = parseColor(it)
+                        val file = File(COL_PAThB1)
                         file.writeText(it)
                     },
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
@@ -111,7 +112,7 @@ fun columnBoxesA() {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileA1().ifEmpty { "0xFF303030" },
+                                text = readTiFileB1().ifEmpty { "0xFF303030" },
                                 color = Color.White, textAlign = TextAlign.Center
                             )
                         }
@@ -120,25 +121,25 @@ fun columnBoxesA() {
             }
         }
 
-////////////////////////////// Box A2
-        var loadedColorA2 by remember { mutableStateOf(Color(0xFF303030)) }
-        var userInputA2 by remember { mutableStateOf("") }
+////////////////////////////// Box B2
+        var loadedColorB2 by remember { mutableStateOf(Color(0xFF303030)) }
+        var userInputB2 by remember { mutableStateOf("") }
         LaunchedEffect(Unit) {
-            val file = File(COL_PAThA2)
+            val file = File(COL_PAThB2)
             if (!file.exists()) {
                 val directory = File(file.parent)
                 directory.mkdirs()
             }
             if (file.exists()) {
                 val savedColorCode = file.readText()
-                loadedColorA2 = parseColor(savedColorCode)
+                loadedColorB2 = parseColor(savedColorCode)
             }
         }
         Box(
             modifier = Modifier
                 .weight(1f)
                 //.aspectRatio(1.5f)
-                .background((loadedColorA2), shape = AbsoluteRoundedCornerShape(5.dp)),
+                .background((loadedColorB2), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
             Column( modifier = Modifier.fillMaxSize(),
@@ -146,11 +147,11 @@ fun columnBoxesA() {
                 verticalArrangement = Arrangement.Center
             ) {
                 TextField(
-                    value = userInputA2,
+                    value = userInputB2,
                     onValueChange = {
-                        userInputA2 = it
-                        loadedColorA2 = parseColor(it)
-                        val file = File(COL_PAThA2)
+                        userInputB2 = it
+                        loadedColorB2 = parseColor(it)
+                        val file = File(COL_PAThB2)
                         file.writeText(it)
                     },
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
@@ -162,7 +163,7 @@ fun columnBoxesA() {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileA2().ifEmpty { "0xFF303030" },
+                                text = readTiFileB2().ifEmpty { "0xFF303030" },
                                 color = Color.White, textAlign = TextAlign.Center
                             )
                         }
@@ -171,25 +172,25 @@ fun columnBoxesA() {
             }
         }
 
-////////////////////////////// Box A3
-        var loadedColorA3 by remember { mutableStateOf(Color(0xFF303030)) }
-        var userInputA3 by remember { mutableStateOf("") }
+////////////////////////////// Box B3
+        var loadedColorB3 by remember { mutableStateOf(Color(0xFF303030)) }
+        var userInputB3 by remember { mutableStateOf("") }
         LaunchedEffect(Unit) {
-            val file = File(COL_PAThA3)
+            val file = File(COL_PAThB3)
             if (!file.exists()) {
                 val directory = File(file.parent)
                 directory.mkdirs()
             }
             if (file.exists()) {
                 val savedColorCode = file.readText()
-                loadedColorA3 = parseColor(savedColorCode)
+                loadedColorB3 = parseColor(savedColorCode)
             }
         }
         Box(
             modifier = Modifier
                 .weight(1f)
                 //.aspectRatio(1.5f)
-                .background((loadedColorA3), shape = AbsoluteRoundedCornerShape(5.dp)),
+                .background((loadedColorB3), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
             Column( modifier = Modifier.fillMaxSize(),
@@ -197,11 +198,11 @@ fun columnBoxesA() {
                 verticalArrangement = Arrangement.Center
             ) {
                 TextField(
-                    value = userInputA3,
+                    value = userInputB3,
                     onValueChange = {
-                        userInputA3 = it
-                        loadedColorA3 = parseColor(it)
-                        val file = File(COL_PAThA3)
+                        userInputB3 = it
+                        loadedColorB3 = parseColor(it)
+                        val file = File(COL_PAThB3)
                         file.writeText(it)
                     },
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
@@ -213,7 +214,7 @@ fun columnBoxesA() {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileA3().ifEmpty { "0xFF303030" },
+                                text = readTiFileB3().ifEmpty { "0xFF303030" },
                                 color = Color.White, textAlign = TextAlign.Center
                             )
                         }
