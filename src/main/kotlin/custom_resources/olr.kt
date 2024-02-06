@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 
 @Composable
-fun ornScn(wmk: String) {
+fun olrScn(wmk: String) {
     Box(modifier = Modifier.fillMaxSize()) {
 
         Text(
@@ -21,4 +21,5 @@ fun ornScn(wmk: String) {
             style = MaterialTheme.typography.body1
         )
     }
+    println("olracnai > https://github.com/olracnai")
 }
