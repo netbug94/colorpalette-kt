@@ -13,7 +13,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import engine_logic.*
-import org.jetbrains.skia.impl.Stats.enabled
 import java.io.File
 
 ////////////////////////////// Dynamic boxes B
@@ -42,7 +41,6 @@ fun columnBoxesB(isLocked: Boolean) {
 ////////////////////////////// Box B0
         Box( modifier = Modifier
             .weight(1f)
-            //.aspectRatio(1.5f)
             .background((loadedColorB0), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -55,9 +53,8 @@ fun columnBoxesB(isLocked: Boolean) {
                         userInputB0 = it
                         loadedColorB0 = parseColor(it)
                         val file = File(COL_PAThB0)
-                        file.writeText(it)
-                        enabled = !isLocked // Setting enabled based on isLocked state
-                        },
+                        file.writeText(it) },
+                    enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
@@ -90,7 +87,6 @@ fun columnBoxesB(isLocked: Boolean) {
         }
         Box( modifier = Modifier
             .weight(1f)
-            //.aspectRatio(1.5f)
             .background((loadedColorB1), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -104,9 +100,8 @@ fun columnBoxesB(isLocked: Boolean) {
                         userInputB1 = it
                         loadedColorB1 = parseColor(it)
                         val file = File(COL_PAThB1)
-                        file.writeText(it)
-                        enabled = !isLocked // Setting enabled based on isLocked state
-                    },
+                        file.writeText(it) },
+                    enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
@@ -142,7 +137,6 @@ fun columnBoxesB(isLocked: Boolean) {
         Box(
             modifier = Modifier
                 .weight(1f)
-                //.aspectRatio(1.5f)
                 .background((loadedColorB2), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -156,9 +150,8 @@ fun columnBoxesB(isLocked: Boolean) {
                         userInputB2 = it
                         loadedColorB2 = parseColor(it)
                         val file = File(COL_PAThB2)
-                        file.writeText(it)
-                        enabled = !isLocked // Setting enabled based on isLocked state
-                    },
+                        file.writeText(it) },
+                    enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
@@ -194,7 +187,6 @@ fun columnBoxesB(isLocked: Boolean) {
         Box(
             modifier = Modifier
                 .weight(1f)
-                //.aspectRatio(1.5f)
                 .background((loadedColorB3), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -208,9 +200,8 @@ fun columnBoxesB(isLocked: Boolean) {
                         userInputB3 = it
                         loadedColorB3 = parseColor(it)
                         val file = File(COL_PAThB3)
-                        file.writeText(it)
-                        enabled = !isLocked // Setting enabled based on isLocked state
-                    },
+                        file.writeText(it) },
+                    enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
