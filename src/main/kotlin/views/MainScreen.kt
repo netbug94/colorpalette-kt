@@ -2,10 +2,11 @@ package views
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import buttons.lockSwitch
 import custom_resources.ErgoGray
 import dynamic_boxes.columnBoxesA
 import dynamic_boxes.columnBoxesB
@@ -13,9 +14,12 @@ import engine_logic.dynBxsSpacerWidth
 
 @Composable
 fun mainScreen() {
+    var isLocked by remember { mutableStateOf(false) }
+
     Column(modifier = Modifier.fillMaxSize().background(ErgoGray)) {
 
-        Column(modifier = Modifier.weight(1f)) { lockSwitch()
+        Column(modifier = Modifier.weight(1f)) {
+            lockSwitch(isLocked) { isLocked = it }
 
             Row(
                 modifier = Modifier.fillMaxSize(),
@@ -25,12 +29,12 @@ fun mainScreen() {
 
                 dynBxsSpacerWidth()
                 Column(modifier = Modifier.weight(1f)) {
-                    columnBoxesA()
+                    columnBoxesA(isLocked)
                 }
                 Spacer(modifier = Modifier.width(0.dp))
 
                 Column(modifier = Modifier.weight(1f)) {
-                    columnBoxesB()
+                    columnBoxesB(isLocked)
                 }
                 dynBxsSpacerWidth()
             }

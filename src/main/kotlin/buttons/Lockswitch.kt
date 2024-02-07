@@ -1,4 +1,4 @@
-package views
+package buttons
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,16 +13,13 @@ import custom_resources.BlueAlert
 import custom_resources.RedAlert
 
 @Composable
-fun lockSwitch() {
-    var checked by remember { mutableStateOf(true) }
-
+fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
     Column(verticalArrangement = Arrangement.Top) {
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
             Switch(
                 modifier = Modifier.scale(1.5f),
-                checked = checked,
-                onCheckedChange = { checked = it },
-
+                checked = isLocked,
+                onCheckedChange = { onToggle(!isLocked) }, // Toggling the state
                 colors = SwitchDefaults.colors(
                     checkedThumbColor = BlueAlert,
                     checkedTrackColor = BlueAlert,

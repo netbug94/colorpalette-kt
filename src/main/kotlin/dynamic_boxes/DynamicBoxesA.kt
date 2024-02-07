@@ -13,11 +13,12 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import engine_logic.*
+import org.jetbrains.skia.impl.Stats.enabled
 import java.io.File
 
 ////////////////////////////// Dynamic boxes A
 @Composable
-fun columnBoxesA() {
+fun columnBoxesA(isLocked: Boolean) {
     var loadedColorA0 by remember { mutableStateOf(Color(0xFF303030)) }
     var userInputA0 by remember { mutableStateOf("") }
 
@@ -41,7 +42,6 @@ fun columnBoxesA() {
 ////////////////////////////// Box A0
         Box( modifier = Modifier
             .weight(1f)
-            //.aspectRatio(1.5f)
             .background((loadedColorA0), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -49,27 +49,35 @@ fun columnBoxesA() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                TextField( value = userInputA0,
+                TextField(
+                    value = userInputA0,
                     onValueChange = {
-                        userInputA0 = it
-                        loadedColorA0 = parseColor(it)
-                        val file = File(COL_PAThA0)
-                        file.writeText(it) },
+                            userInputA0 = it
+                            loadedColorA0 = parseColor(it)
+                            val file = File(COL_PAThA0)
+                            file.writeText(it)
+                    },
+                    enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
-                    textStyle = TextStyle(color = Color.White,
-                        textAlign = TextAlign.Center),
-                    placeholder = { Box( modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Transparent),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text( text = readTiFileA0().ifEmpty { "0xFF303030" },
-                            color = Color.White, textAlign = TextAlign.Center)
+                    textStyle = TextStyle(color = Color.White, textAlign = TextAlign.Center),
+                    placeholder = {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(Color.Transparent),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = readTiFileA0().ifEmpty { "0xFF303030" },
+                                color = Color.White,
+                                textAlign = TextAlign.Center
+                            )
                         }
                     }
                 )
             }
         }
+
 ////////////////////////////// Box A1
         var loadedColorA1 by remember { mutableStateOf(Color(0xFF303030)) }
         var userInputA1 by remember { mutableStateOf("") }
@@ -87,7 +95,6 @@ fun columnBoxesA() {
         }
         Box( modifier = Modifier
                 .weight(1f)
-                //.aspectRatio(1.5f)
                 .background((loadedColorA1), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -103,6 +110,7 @@ fun columnBoxesA() {
                         val file = File(COL_PAThA1)
                         file.writeText(it)
                     },
+                    enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
@@ -138,7 +146,6 @@ fun columnBoxesA() {
         Box(
             modifier = Modifier
                 .weight(1f)
-                //.aspectRatio(1.5f)
                 .background((loadedColorA2), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -149,6 +156,7 @@ fun columnBoxesA() {
                 TextField(
                     value = userInputA2,
                     onValueChange = {
+                        enabled = !isLocked // Setting enabled based on isLocked state
                         userInputA2 = it
                         loadedColorA2 = parseColor(it)
                         val file = File(COL_PAThA2)
@@ -189,7 +197,6 @@ fun columnBoxesA() {
         Box(
             modifier = Modifier
                 .weight(1f)
-                //.aspectRatio(1.5f)
                 .background((loadedColorA3), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
@@ -200,6 +207,7 @@ fun columnBoxesA() {
                 TextField(
                     value = userInputA3,
                     onValueChange = {
+                        enabled = !isLocked // Setting enabled based on isLocked state
                         userInputA3 = it
                         loadedColorA3 = parseColor(it)
                         val file = File(COL_PAThA3)

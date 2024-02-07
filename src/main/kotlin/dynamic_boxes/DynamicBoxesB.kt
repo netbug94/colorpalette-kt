@@ -13,11 +13,12 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import engine_logic.*
+import org.jetbrains.skia.impl.Stats.enabled
 import java.io.File
 
 ////////////////////////////// Dynamic boxes B
 @Composable
-fun columnBoxesB() {
+fun columnBoxesB(isLocked: Boolean) {
     var loadedColorB0 by remember { mutableStateOf(Color(0xFF303030)) }
     var userInputB0 by remember { mutableStateOf("") }
 
@@ -54,7 +55,9 @@ fun columnBoxesB() {
                         userInputB0 = it
                         loadedColorB0 = parseColor(it)
                         val file = File(COL_PAThB0)
-                        file.writeText(it) },
+                        file.writeText(it)
+                        enabled = !isLocked // Setting enabled based on isLocked state
+                        },
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
@@ -102,6 +105,7 @@ fun columnBoxesB() {
                         loadedColorB1 = parseColor(it)
                         val file = File(COL_PAThB1)
                         file.writeText(it)
+                        enabled = !isLocked // Setting enabled based on isLocked state
                     },
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
@@ -153,6 +157,7 @@ fun columnBoxesB() {
                         loadedColorB2 = parseColor(it)
                         val file = File(COL_PAThB2)
                         file.writeText(it)
+                        enabled = !isLocked // Setting enabled based on isLocked state
                     },
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
@@ -204,6 +209,7 @@ fun columnBoxesB() {
                         loadedColorB3 = parseColor(it)
                         val file = File(COL_PAThB3)
                         file.writeText(it)
+                        enabled = !isLocked // Setting enabled based on isLocked state
                     },
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
