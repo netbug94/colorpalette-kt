@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.text.font.FontWeight
 import custom_resources.BlueAlert
 import custom_resources.RedAlert
 
@@ -19,9 +20,10 @@ fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically) {
 
-            Box( modifier = Modifier.weight(1f),
+            Box( modifier = Modifier.scale(2.2f).weight(8f),
                 contentAlignment = Alignment.Center) {
-                Text("Dynamic")
+                Text("Dynamic", color = if (isLocked) BlueAlert else RedAlert,
+                    fontWeight = FontWeight.Bold)
             }
             Switch( modifier = Modifier.scale(1.5f).weight(1f),
                 checked = isLocked,
@@ -33,9 +35,10 @@ fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
                     uncheckedTrackColor = RedAlert
                 )
             )
-            Box( modifier = Modifier.weight(1f),
+            Box( modifier = Modifier.scale(2.2f).weight(8f),
                 contentAlignment = Alignment.Center) {
-                Text("Palette")
+                Text("Palette", color = if (isLocked) BlueAlert else RedAlert,
+                    fontWeight = FontWeight.Bold)
             }
         }
     }
