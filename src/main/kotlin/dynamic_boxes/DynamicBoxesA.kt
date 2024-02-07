@@ -13,7 +13,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import engine_logic.*
-import org.jetbrains.skia.impl.Stats.enabled
 import java.io.File
 
 ////////////////////////////// Dynamic boxes A
@@ -156,12 +155,12 @@ fun columnBoxesA(isLocked: Boolean) {
                 TextField(
                     value = userInputA2,
                     onValueChange = {
-                        enabled = !isLocked // Setting enabled based on isLocked state
                         userInputA2 = it
                         loadedColorA2 = parseColor(it)
                         val file = File(COL_PAThA2)
                         file.writeText(it)
                     },
+                    enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
@@ -207,12 +206,12 @@ fun columnBoxesA(isLocked: Boolean) {
                 TextField(
                     value = userInputA3,
                     onValueChange = {
-                        enabled = !isLocked // Setting enabled based on isLocked state
                         userInputA3 = it
                         loadedColorA3 = parseColor(it)
                         val file = File(COL_PAThA3)
                         file.writeText(it)
                     },
+                    enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
