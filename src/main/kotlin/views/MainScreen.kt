@@ -14,7 +14,7 @@ import engine_logic.dynBxsSpacerWidth
 
 @Composable
 fun mainScreen() {
-    var isLocked by remember { mutableStateOf(false) }
+    var isLocked by remember { mutableStateOf(true) }
 
     Column(modifier = Modifier.fillMaxSize().background(ErgoGray)) {
 

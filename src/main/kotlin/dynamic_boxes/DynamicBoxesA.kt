@@ -67,9 +67,9 @@ fun columnBoxesA(isLocked: Boolean) {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileA0().ifEmpty { "0xFF303030" },
-                                color = Color.White,
-                                textAlign = TextAlign.Center
+                                text = readTiFileA0().ifEmpty { bxsColor },
+                                color = Color.White, textAlign = TextAlign.Center,
+                                fontSize = boxesFont
                             )
                         }
                     }
@@ -119,8 +119,9 @@ fun columnBoxesA(isLocked: Boolean) {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileA1().ifEmpty { "0xFF303030" },
-                                color = Color.White, textAlign = TextAlign.Center
+                                text = readTiFileA1().ifEmpty { bxsColor },
+                                color = Color.White, textAlign = TextAlign.Center,
+                                fontSize = boxesFont
                             )
                         }
                     }
@@ -170,8 +171,9 @@ fun columnBoxesA(isLocked: Boolean) {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileA2().ifEmpty { "0xFF303030" },
-                                color = Color.White, textAlign = TextAlign.Center
+                                text = readTiFileA2().ifEmpty { bxsColor },
+                                color = Color.White, textAlign = TextAlign.Center,
+                                fontSize = boxesFont
                             )
                         }
                     }
@@ -221,8 +223,9 @@ fun columnBoxesA(isLocked: Boolean) {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileA3().ifEmpty { "0xFF303030" },
-                                color = Color.White, textAlign = TextAlign.Center
+                                text = readTiFileA3().ifEmpty { bxsColor },
+                                color = Color.White, textAlign = TextAlign.Center,
+                                fontSize = boxesFont
                             )
                         }
                     }

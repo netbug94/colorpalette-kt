@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 const val COL_PAThA0 = "DBPaletteData/colorA0.hdi"
 const val COL_PAThA1 = "DBPaletteData/colorA1.hdi"
@@ -29,3 +30,7 @@ fun parseColor(input: String): Color {
         Color(0xFF303030)
     }
 }
+
+val boxesFont = 28.sp
+
+val bxsColor = "0xFF303030"

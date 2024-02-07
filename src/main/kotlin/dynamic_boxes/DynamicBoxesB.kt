@@ -48,7 +48,8 @@ fun columnBoxesB(isLocked: Boolean) {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                TextField( value = userInputB0,
+                TextField(
+                    value = userInputB0,
                     onValueChange = {
                         userInputB0 = it
                         loadedColorB0 = parseColor(it)
@@ -58,14 +59,17 @@ fun columnBoxesB(isLocked: Boolean) {
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
                     textStyle = TextStyle(color = Color.White,
                         textAlign = TextAlign.Center),
-                    placeholder = { Box( modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Transparent),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text( text = readTiFileB0().ifEmpty { "0xFF303030" },
-                            color = Color.White, textAlign = TextAlign.Center)
-                    }
+                    placeholder = {
+                        Box(
+                            modifier = Modifier.fillMaxSize().background(Color.Transparent),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = readTiFileB0().ifEmpty { bxsColor },
+                                color = Color.White, textAlign = TextAlign.Center,
+                                fontSize = boxesFont
+                            )
+                        }
                     }
                 )
             }
@@ -111,8 +115,9 @@ fun columnBoxesB(isLocked: Boolean) {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileB1().ifEmpty { "0xFF303030" },
-                                color = Color.White, textAlign = TextAlign.Center
+                                text = readTiFileB1().ifEmpty { bxsColor },
+                                color = Color.White, textAlign = TextAlign.Center,
+                                fontSize = boxesFont
                             )
                         }
                     }
@@ -161,8 +166,9 @@ fun columnBoxesB(isLocked: Boolean) {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileB2().ifEmpty { "0xFF303030" },
-                                color = Color.White, textAlign = TextAlign.Center
+                                text = readTiFileB2().ifEmpty { bxsColor },
+                                color = Color.White, textAlign = TextAlign.Center,
+                                fontSize = boxesFont
                             )
                         }
                     }
@@ -211,8 +217,9 @@ fun columnBoxesB(isLocked: Boolean) {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = readTiFileB3().ifEmpty { "0xFF303030" },
-                                color = Color.White, textAlign = TextAlign.Center
+                                text = readTiFileB3().ifEmpty { bxsColor },
+                                color = Color.White, textAlign = TextAlign.Center,
+                                fontSize = boxesFont
                             )
                         }
                     }
