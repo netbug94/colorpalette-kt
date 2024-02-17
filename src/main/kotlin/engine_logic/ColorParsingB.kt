@@ -2,7 +2,7 @@ package engine_logic
 
 import java.io.File
 
-////////////////////////////// Read and parse B
+// Read and parse B
 fun readTiFileB0(): String {
     return try {
         val file0 = File(COL_PAThB0).readText()

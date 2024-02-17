@@ -18,14 +18,17 @@ fun mainScreen() {
 
     Column(modifier = Modifier.fillMaxSize().background(ErgoGray)) {
 
-        Column(modifier = Modifier.weight(1f)) {
+        Row(modifier = Modifier.fillMaxSize().weight(1f),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically) {
             lockSwitch(isLocked) { isLocked = it }
-
-            Row(
-                modifier = Modifier.fillMaxSize(),
+        }
+        Column(modifier = Modifier.fillMaxSize().weight(10f),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            Row(modifier = Modifier.fillMaxSize(),
                 horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
+                verticalAlignment = Alignment.CenterVertically) {
 
                 dynBxsSpacerWidth()
                 Column(modifier = Modifier.weight(1f)) {

@@ -12,9 +12,7 @@ import androidx.compose.ui.draw.alpha
 fun olrScn(wmk: String) {
     Box(modifier = Modifier.fillMaxSize()) {
 
-        Text(
-            text = wmk,
-            modifier = Modifier
+        Text(text = wmk, modifier = Modifier
                 .align(Alignment.BottomEnd)
                 .alpha(.5f),
         )
