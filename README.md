@@ -5,9 +5,24 @@
 ## DynamicColorPalette
 </div>
 
-- [ ] I like to get my colors from this website [Converting Colors](https://convertingcolors.com/)
-- [ ] On launch its always locked to keep your saved colors safe
-<div align="center">
+- [ ] I like to get my colors from this website, [Converting Colors](https://convertingcolors.com/)
+- [ ] On launch, it's always locked to keep your saved colors safe
 
-![Screenshot from 2024-02-17 14-58-22](https://github.com/olracnai/DynamicColorPalette/assets/135581442/e514368b-dc38-4d87-8187-d64e6289b6ad)
+<div align="center">
+  
+![Screenshot from 2024-02-17 15-09-49](https://github.com/olracnai/DynamicColorPalette/assets/135581442/b960a504-852b-46be-bff9-53fd6ac6e2df)
+</div>
+
+- [ ] You can unlock the app by simply clicking the switch button or pressing 'Enter' or 'Space'
+
+<div align="center">
+  
+![Screenshot from 2024-02-17 15-09-58](https://github.com/olracnai/DynamicColorPalette/assets/135581442/0176e591-bafe-463d-8cfb-8c6c447ae7ff)
+</div>
+
+- [ ] Add and compare your colors, make sure to use Android format, example '0xFFA79125'
+
+<div align="center">
+  
+![Screenshot from 2024-02-17 15-10-23](https://github.com/olracnai/DynamicColorPalette/assets/135581442/443a13ab-c246-40da-9bc0-cc46e13a5a86)
 </div>
