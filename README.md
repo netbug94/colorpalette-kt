@@ -5,4 +5,9 @@
 ## DynamicColorPalette
 </div>
 
-- [ ] I like to get my colors from this website
+- [ ] I like to get my colors from this website [Converting Colors](https://convertingcolors.com/)
+- [ ] On launch its always locked to keep your saved colors safe
+<div align="center">
+
+![Screenshot from 2024-02-17 14-58-22](https://github.com/olracnai/DynamicColorPalette/assets/135581442/e514368b-dc38-4d87-8187-d64e6289b6ad)
+</div>
