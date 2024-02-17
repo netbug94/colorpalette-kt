@@ -16,7 +16,7 @@ import custom_resources.smartText
 import engine_logic.*
 import java.io.File
 
-////////////////////////////// Dynamic boxes A
+// Dynamic boxes A
 @Composable
 fun columnBoxesA(isLocked: Boolean) {
     var loadedColorA0 by remember { mutableStateOf(Color(0xFF303030)) }
@@ -35,42 +35,35 @@ fun columnBoxesA(isLocked: Boolean) {
             loadedColorA0 = parseColor(savedColorCode)
         }
     }
-
-    Column( modifier = Modifier.padding(5.dp).fillMaxSize(),
+    Column(modifier = Modifier.padding(5.dp).fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-
-////////////////////////////// Box A0
-        Box( modifier = Modifier
+        verticalArrangement = Arrangement.Center) {
+// Box A0
+        Box(modifier = Modifier
             .weight(1f)
             .background((loadedColorA0), shape = AbsoluteRoundedCornerShape(5.dp)),
-            contentAlignment = Alignment.Center
-        ) {
+            contentAlignment = Alignment.Center) {
+
             Column( modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                TextField(
-                    value = userInputA0,
+                verticalArrangement = Arrangement.Center) {
+
+                TextField(value = userInputA0,
                     onValueChange = {
                             userInputA0 = it
                             loadedColorA0 = parseColor(it)
                             val file = File(COL_PAThA0)
-                            file.writeText(it)
-                    },
+                            file.writeText(it)},
                     enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
-                    textStyle = TextStyle(color = Color.White, textAlign = TextAlign.Center),
+                    textStyle = TextStyle(color = Color.White, textAlign = TextAlign.Center, fontSize = boxesFont),
                     placeholder = {
-                        Box(
-                            modifier = Modifier
+
+                        Box(modifier = Modifier
                                 .fillMaxSize()
                                 .background(Color.Transparent),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = readTiFileA0().ifEmpty { bxsColor },
+                            contentAlignment = Alignment.Center) {
+                            Text(text = readTiFileA0().ifEmpty { bxsColor },
                                 color = Color.White, textAlign = TextAlign.Center,
                                 fontSize = boxesFont
                             )
@@ -79,8 +72,7 @@ fun columnBoxesA(isLocked: Boolean) {
                 )
             }
         }
-
-////////////////////////////// Box A1
+// Box A1
         var loadedColorA1 by remember { mutableStateOf(Color(0xFF303030)) }
         var userInputA1 by remember { mutableStateOf("") }
 
@@ -95,34 +87,29 @@ fun columnBoxesA(isLocked: Boolean) {
                 loadedColorA1 = parseColor(savedColorCode)
             }
         }
-        Box( modifier = Modifier
+        Box(modifier = Modifier
                 .weight(1f)
                 .background((loadedColorA1), shape = AbsoluteRoundedCornerShape(5.dp)),
-            contentAlignment = Alignment.Center
-        ) {
-            Column( modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center) {
+
+            Column(modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                TextField(
-                    value = userInputA1,
+                verticalArrangement = Arrangement.Center) {
+
+                TextField(value = userInputA1,
                     onValueChange = {
                         userInputA1 = it
                         loadedColorA1 = parseColor(it)
                         val file = File(COL_PAThA1)
-                        file.writeText(it)
-                    },
+                        file.writeText(it)},
                     enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
-                    textStyle = TextStyle(color = Color.White,
-                        textAlign = TextAlign.Center),
+                    textStyle = TextStyle(color = Color.White, textAlign = TextAlign.Center, fontSize = boxesFont),
                     placeholder = {
-                        Box(
-                            modifier = Modifier.fillMaxSize().background(Color.Transparent),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = readTiFileA1().ifEmpty { bxsColor },
+
+                        Box(modifier = Modifier.fillMaxSize().background(Color.Transparent),
+                            contentAlignment = Alignment.Center) {
+                            Text(text = readTiFileA1().ifEmpty { bxsColor },
                                 color = Color.White, textAlign = TextAlign.Center,
                                 fontSize = boxesFont
                             )
@@ -131,8 +118,7 @@ fun columnBoxesA(isLocked: Boolean) {
                 )
             }
         }
-
-////////////////////////////// Box A2
+// Box A2
         var loadedColorA2 by remember { mutableStateOf(Color(0xFF303030)) }
         var userInputA2 by remember { mutableStateOf("") }
         LaunchedEffect(Unit) {
@@ -146,35 +132,29 @@ fun columnBoxesA(isLocked: Boolean) {
                 loadedColorA2 = parseColor(savedColorCode)
             }
         }
-        Box(
-            modifier = Modifier
+        Box(modifier = Modifier
                 .weight(1f)
                 .background((loadedColorA2), shape = AbsoluteRoundedCornerShape(5.dp)),
-            contentAlignment = Alignment.Center
-        ) {
+            contentAlignment = Alignment.Center) {
+
             Column( modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                TextField(
-                    value = userInputA2,
+                verticalArrangement = Arrangement.Center) {
+
+                TextField(value = userInputA2,
                     onValueChange = {
                         userInputA2 = it
                         loadedColorA2 = parseColor(it)
                         val file = File(COL_PAThA2)
-                        file.writeText(it)
-                    },
+                        file.writeText(it)},
                     enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
-                    textStyle = TextStyle(color = Color.White,
-                        textAlign = TextAlign.Center),
+                    textStyle = TextStyle(color = Color.White, textAlign = TextAlign.Center, fontSize = boxesFont),
                     placeholder = {
-                        Box(
-                            modifier = Modifier.fillMaxSize().background(Color.Transparent),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = readTiFileA2().ifEmpty { bxsColor },
+
+                        Box(modifier = Modifier.fillMaxSize().background(Color.Transparent),
+                            contentAlignment = Alignment.Center) {
+                            Text(text = readTiFileA2().ifEmpty { bxsColor },
                                 color = Color.White, textAlign = TextAlign.Center,
                                 fontSize = boxesFont
                             )
@@ -183,8 +163,7 @@ fun columnBoxesA(isLocked: Boolean) {
                 )
             }
         }
-
-////////////////////////////// Box A3
+// Box A3
         var loadedColorA3 by remember { mutableStateOf(Color(0xFF303030)) }
         var userInputA3 by remember { mutableStateOf("") }
         LaunchedEffect(Unit) {
@@ -198,35 +177,28 @@ fun columnBoxesA(isLocked: Boolean) {
                 loadedColorA3 = parseColor(savedColorCode)
             }
         }
-        Box(
-            modifier = Modifier
+        Box(modifier = Modifier
                 .weight(1f)
                 .background((loadedColorA3), shape = AbsoluteRoundedCornerShape(5.dp)),
-            contentAlignment = Alignment.Center
-        ) {
-            Column( modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center) {
+
+            Column(modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                TextField(
-                    value = userInputA3,
+                verticalArrangement = Arrangement.Center) {
+                TextField(value = userInputA3,
                     onValueChange = {
                         userInputA3 = it
                         loadedColorA3 = parseColor(it)
                         val file = File(COL_PAThA3)
-                        file.writeText(it)
-                    },
+                        file.writeText(it)},
                     enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
-                    textStyle = TextStyle(color = Color.White,
-                        textAlign = TextAlign.Center),
+                    textStyle = TextStyle(color = Color.White, textAlign = TextAlign.Center, fontSize = boxesFont),
                     placeholder = {
-                        Box(
-                            modifier = Modifier.fillMaxSize().background(Color.Transparent),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = readTiFileA3().ifEmpty { bxsColor },
+
+                        Box(modifier = Modifier.fillMaxSize().background(Color.Transparent),
+                            contentAlignment = Alignment.Center) {
+                            Text(text = readTiFileA3().ifEmpty { bxsColor },
                                 color = Color.White, textAlign = TextAlign.Center,
                                 fontSize = boxesFont
                             )
