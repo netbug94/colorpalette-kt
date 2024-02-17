@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import custom_resources.smartText
 import engine_logic.*
 import java.io.File
 
@@ -20,6 +21,8 @@ import java.io.File
 fun columnBoxesA(isLocked: Boolean) {
     var loadedColorA0 by remember { mutableStateOf(Color(0xFF303030)) }
     var userInputA0 by remember { mutableStateOf("") }
+
+    val boxesFont = smartText(1f)
 
     LaunchedEffect(Unit) {
         val file = File(COL_PAThA0)
