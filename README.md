@@ -6,7 +6,7 @@
 </div>
 
 - [ ] I like to get my colors from this website, [Converting Colors](https://convertingcolors.com/)
-- [ ] On launch, it's always locked to keep your saved colors safe
+- [ ] At launch, it remains locked to safeguard your saved colors from unexpected edits
 
 <div align="center">
   
@@ -20,7 +20,7 @@
 ![Screenshot from 2024-02-17 15-09-58](https://github.com/olracnai/DynamicColorPalette/assets/135581442/0176e591-bafe-463d-8cfb-8c6c447ae7ff)
 </div>
 
-- [ ] Add and compare your colors, make sure to use Android format, example '0xFFA79125'
+- [ ] Add and compare your colors, make sure to use Android format, for example '0xFFA79125'
 
 <div align="center">
   
