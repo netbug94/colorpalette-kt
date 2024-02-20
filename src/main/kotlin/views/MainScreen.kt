@@ -8,9 +8,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import buttons.lockSwitch
 import custom_resources.ErgoGray
+import custom_resources.mainScnSpacerW
 import dynamic_boxes.columnBoxesA
 import dynamic_boxes.columnBoxesB
-import engine_logic.dynBxsSpacerWidth
 
 @Composable
 fun mainScreen() {
@@ -30,7 +30,7 @@ fun mainScreen() {
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically) {
 
-                dynBxsSpacerWidth()
+                mainScnSpacerW()
                 Column(modifier = Modifier.weight(1f)) {
                     columnBoxesA(isLocked)
                 }
@@ -39,7 +39,7 @@ fun mainScreen() {
                 Column(modifier = Modifier.weight(1f)) {
                     columnBoxesB(isLocked)
                 }
-                dynBxsSpacerWidth()
+                mainScnSpacerW()
             }
         }
     }

@@ -19,7 +19,7 @@ import java.io.File
 // Dynamic boxes A
 @Composable
 fun columnBoxesA(isLocked: Boolean) {
-    val colorParsingA = ColorParsingA()
+    val colorParsingA = ColorReadA()
     val colorPathA0 = "DBPaletteData/colorA0.hdi"
     val colorPathA1 = "DBPaletteData/colorA1.hdi"
     val colorPathA2 = "DBPaletteData/colorA2.hdi"

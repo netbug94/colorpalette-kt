@@ -2,13 +2,13 @@ package engine_logic
 
 import java.io.File
 
-class ColorParsingB {
+// Read and parse B
+class ColorReadB {
     private val colorPathB0 = "DBPaletteData/colorB0.hdi"
     private val colorPathB1 = "DBPaletteData/colorB1.hdi"
     private val colorPathB2 = "DBPaletteData/colorB2.hdi"
     private val colorPathB3 = "DBPaletteData/colorB3.hdi"
 
-    // Read and parse B
     fun readTiFileB0(): String {
         return try {
             val file0 = File(colorPathB0).readText()
