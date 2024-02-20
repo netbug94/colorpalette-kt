@@ -19,13 +19,19 @@ import java.io.File
 // Dynamic boxes B
 @Composable
 fun columnBoxesB(isLocked: Boolean) {
+    val colorParsingB = ColorParsingB()
+    val colorPathB0 = "DBPaletteData/colorB0.hdi"
+    val colorPathB1 = "DBPaletteData/colorB1.hdi"
+    val colorPathB2 = "DBPaletteData/colorB2.hdi"
+    val colorPathB3 = "DBPaletteData/colorB3.hdi"
     var loadedColorB0 by remember { mutableStateOf(Color(0xFF303030)) }
     var userInputB0 by remember { mutableStateOf("") }
 
     val boxesFont = smartText(1f)
+    val bxsColor = "0xFF303030"
 
     LaunchedEffect(Unit) {
-        val file = File(COL_PAThB0)
+        val file = File(colorPathB0)
         if (!file.exists()) {
             val directory = File(file.parent)
             directory.mkdirs()
@@ -52,7 +58,7 @@ fun columnBoxesB(isLocked: Boolean) {
                     onValueChange = {
                         userInputB0 = it
                         loadedColorB0 = parseColor(it)
-                        val file = File(COL_PAThB0)
+                        val file = File(colorPathB0)
                         file.writeText(it) },
                     enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
@@ -61,7 +67,7 @@ fun columnBoxesB(isLocked: Boolean) {
 
                         Box(modifier = Modifier.fillMaxSize().background(Color.Transparent),
                             contentAlignment = Alignment.Center) {
-                            Text(text = readTiFileB0().ifEmpty { bxsColor },
+                            Text(text = colorParsingB.readTiFileB0().ifEmpty { bxsColor },
                                 color = Color.White, textAlign = TextAlign.Center,
                                 fontSize = boxesFont
                             )
@@ -75,7 +81,7 @@ fun columnBoxesB(isLocked: Boolean) {
         var userInputB1 by remember { mutableStateOf("") }
 
         LaunchedEffect(Unit) {
-            val file = File(COL_PAThB1)
+            val file = File(colorPathB1)
             if (!file.exists()) {
                 val directory = File(file.parent)
                 directory.mkdirs()
@@ -98,7 +104,7 @@ fun columnBoxesB(isLocked: Boolean) {
                     onValueChange = {
                         userInputB1 = it
                         loadedColorB1 = parseColor(it)
-                        val file = File(COL_PAThB1)
+                        val file = File(colorPathB1)
                         file.writeText(it) },
                     enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
@@ -107,7 +113,7 @@ fun columnBoxesB(isLocked: Boolean) {
 
                         Box(modifier = Modifier.fillMaxSize().background(Color.Transparent),
                             contentAlignment = Alignment.Center) {
-                            Text(text = readTiFileB1().ifEmpty { bxsColor },
+                            Text(text = colorParsingB.readTiFileB1().ifEmpty { bxsColor },
                                 color = Color.White, textAlign = TextAlign.Center,
                                 fontSize = boxesFont
                             )
@@ -120,7 +126,7 @@ fun columnBoxesB(isLocked: Boolean) {
         var loadedColorB2 by remember { mutableStateOf(Color(0xFF303030)) }
         var userInputB2 by remember { mutableStateOf("") }
         LaunchedEffect(Unit) {
-            val file = File(COL_PAThB2)
+            val file = File(colorPathB2)
             if (!file.exists()) {
                 val directory = File(file.parent)
                 directory.mkdirs()
@@ -143,7 +149,7 @@ fun columnBoxesB(isLocked: Boolean) {
                     onValueChange = {
                         userInputB2 = it
                         loadedColorB2 = parseColor(it)
-                        val file = File(COL_PAThB2)
+                        val file = File(colorPathB2)
                         file.writeText(it) },
                     enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
@@ -152,7 +158,7 @@ fun columnBoxesB(isLocked: Boolean) {
 
                         Box(modifier = Modifier.fillMaxSize().background(Color.Transparent),
                             contentAlignment = Alignment.Center) {
-                            Text(text = readTiFileB2().ifEmpty { bxsColor },
+                            Text(text = colorParsingB.readTiFileB2().ifEmpty { bxsColor },
                                 color = Color.White, textAlign = TextAlign.Center,
                                 fontSize = boxesFont
                             )
@@ -165,7 +171,7 @@ fun columnBoxesB(isLocked: Boolean) {
         var loadedColorB3 by remember { mutableStateOf(Color(0xFF303030)) }
         var userInputB3 by remember { mutableStateOf("") }
         LaunchedEffect(Unit) {
-            val file = File(COL_PAThB3)
+            val file = File(colorPathB3)
             if (!file.exists()) {
                 val directory = File(file.parent)
                 directory.mkdirs()
@@ -188,7 +194,7 @@ fun columnBoxesB(isLocked: Boolean) {
                     onValueChange = {
                         userInputB3 = it
                         loadedColorB3 = parseColor(it)
-                        val file = File(COL_PAThB3)
+                        val file = File(colorPathB3)
                         file.writeText(it) },
                     enabled = !isLocked, // Setting enabled based on isLocked state
                     modifier = Modifier.fillMaxSize().background(Color.Transparent),
@@ -197,7 +203,7 @@ fun columnBoxesB(isLocked: Boolean) {
 
                         Box(modifier = Modifier.fillMaxSize().background(Color.Transparent),
                             contentAlignment = Alignment.Center) {
-                            Text(text = readTiFileB3().ifEmpty { bxsColor },
+                            Text(text = colorParsingB.readTiFileB3().ifEmpty { bxsColor },
                                 color = Color.White, textAlign = TextAlign.Center,
                                 fontSize = boxesFont
                             )
