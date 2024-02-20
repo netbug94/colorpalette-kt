@@ -9,13 +9,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.text.font.FontWeight
 import custom_resources.BlueAlert
 import custom_resources.RedAlert
+import custom_resources.smartSwitch
 import custom_resources.smartText
 
 @Composable
 fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
+    val switchScale = smartSwitch()
 
     Row(modifier = Modifier.fillMaxSize(),
         horizontalArrangement = Arrangement.Center,
@@ -28,9 +31,12 @@ fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
                 fontSize = smartText(1.2f)
             )
         }
-        Switch(modifier = Modifier.fillMaxSize().weight(1f),
+        Switch(modifier = Modifier
+                .fillMaxSize()
+                .weight(1f)
+                .scale(switchScale as Float), // Adjust the scale factor as needed
             checked = isLocked,
-            onCheckedChange = { onToggle(!isLocked) }, // Toggling the state
+            onCheckedChange = { onToggle(!isLocked) },
             colors = SwitchDefaults.colors(
                 checkedThumbColor = BlueAlert,
                 checkedTrackColor = BlueAlert,
@@ -38,6 +44,7 @@ fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
                 uncheckedTrackColor = RedAlert
             )
         )
+
         Row(modifier = Modifier.fillMaxSize().weight(10f),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically) {
