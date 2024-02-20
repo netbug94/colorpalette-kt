@@ -5,6 +5,7 @@
 ## DynamicColorPalette
 </div>
 
+- [ ] I grew tired of having to edit and launch my app every time I changed colors to compare, so I developed this instead. Hopefully, it helps someone else
 - [ ] I like to get my colors from this website, [Converting Colors](https://convertingcolors.com/)
 - [ ] At launch, it remains locked to safeguard your saved colors from unexpected edits
 
