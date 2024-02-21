@@ -34,7 +34,7 @@ fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
         Switch(modifier = Modifier
                 .fillMaxSize()
                 .weight(1f)
-                .scale(switchScale as Float), // Adjust the scale factor as needed
+                .scale(switchScale as Float),
             checked = isLocked,
             onCheckedChange = { onToggle(!isLocked) },
             colors = SwitchDefaults.colors(
