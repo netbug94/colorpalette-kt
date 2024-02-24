@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import custom_resources.smartText
+import custom_resources.smart_units.smartText
 import engine_logic.*
 import java.io.File
 
@@ -20,10 +20,10 @@ import java.io.File
 @Composable
 fun columnBoxesB(isLocked: Boolean) {
     val colorParsingB = ColorReadB()
-    val colorPathB0 = "DBPaletteData/colorB0.hdi"
-    val colorPathB1 = "DBPaletteData/colorB1.hdi"
-    val colorPathB2 = "DBPaletteData/colorB2.hdi"
-    val colorPathB3 = "DBPaletteData/colorB3.hdi"
+    val colorPathB0 = "CPData/colorB0.hdi"
+    val colorPathB1 = "CPData/colorB1.hdi"
+    val colorPathB2 = "CPData/colorB2.hdi"
+    val colorPathB3 = "CPData/colorB3.hdi"
     var loadedColorB0 by remember { mutableStateOf(Color(0xFF303030)) }
     var userInputB0 by remember { mutableStateOf("") }
 
@@ -41,7 +41,7 @@ fun columnBoxesB(isLocked: Boolean) {
             loadedColorB0 = parseColor(savedColorCode)
         }
     }
-    Column( modifier = Modifier.padding(5.dp).fillMaxSize(),
+    Column(modifier = Modifier.padding(5.dp).fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
 // Box B0

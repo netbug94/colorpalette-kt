@@ -4,10 +4,21 @@ import java.io.File
 
 // Read and parse A
 class ColorReadA {
-    private val colorPathA0 = "DBPaletteData/colorA0.hdi"
-    private val colorPathA1 = "DBPaletteData/colorA1.hdi"
-    private val colorPathA2 = "DBPaletteData/colorA2.hdi"
-    private val colorPathA3 = "DBPaletteData/colorA3.hdi"
+    private val colorPath = "CPData"
+    private val colorPathA0 = "CPData/colorA0.hdi"
+    private val colorPathA1 = "CPData/colorA1.hdi"
+    private val colorPathA2 = "CPData/colorA2.hdi"
+    private val colorPathA3 = "CPData/colorA3.hdi"
+    init {
+        File(colorPath).mkdirs()
+        for (i in  0 until  4) { // Number of files
+            val fileName = "colorA$i.hdi"
+            val file = File("${colorPath}/$fileName")
+            if (!file.exists()) {
+                file.createNewFile() // Create the file if it does not exist
+            }
+        }
+    }
 
     fun readTiFileA0(): String {
         return try {

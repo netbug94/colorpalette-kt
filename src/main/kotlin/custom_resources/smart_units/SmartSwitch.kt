@@ -1,4 +1,4 @@
-package custom_resources
+package custom_resources.smart_units
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -14,8 +14,8 @@ fun smartSwitch(): Any {
         displayState in   726..825 ->  1.4f
         displayState in   826..1125 ->  1.7f
         displayState in   1126..1325 ->  1.9f
-        displayState in   1326..1525 ->  2.4f
-        displayState >=   1527 ->  3f
+        displayState in   1326..1525 ->  2.2f
+        displayState >=   1527 ->  2.6f
         else ->  1f // Default size
     }
 }

@@ -10,4 +10,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "DynamicColorPalette"
+rootProject.name = "colorpalette-kt"

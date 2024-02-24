@@ -1,4 +1,4 @@
-package buttons
+package custom_resources.buttons
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -11,10 +11,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.text.font.FontWeight
-import custom_resources.BlueAlert
-import custom_resources.RedAlert
-import custom_resources.smartSwitch
-import custom_resources.smartText
+import custom_resources.misc.BlueAlert
+import custom_resources.misc.RedAlert
+import custom_resources.smart_units.smartSwitch
+import custom_resources.smart_units.smartText
 
 @Composable
 fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
@@ -27,7 +27,7 @@ fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
         Row(modifier = Modifier.fillMaxSize().weight(10f),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically) {
-            Text("Dynamic", color = if (isLocked) BlueAlert else RedAlert, fontWeight = FontWeight.Bold,
+            Text("Color", color = if (isLocked) BlueAlert else RedAlert, fontWeight = FontWeight.Bold,
                 fontSize = smartText(1.2f)
             )
         }
@@ -49,7 +49,8 @@ fun lockSwitch(isLocked: Boolean, onToggle: (Boolean) -> Unit) {
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically) {
             Text("Palette", color = if (isLocked) BlueAlert else RedAlert, fontWeight = FontWeight.Bold,
-                fontSize = smartText(1.2f))
+                fontSize = smartText(1.2f)
+            )
         }
     }
 }

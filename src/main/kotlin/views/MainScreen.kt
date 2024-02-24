@@ -6,9 +6,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import buttons.lockSwitch
-import custom_resources.ErgoGray
-import custom_resources.mainScnSpacerW
+import custom_resources.buttons.lockSwitch
+import custom_resources.misc.ErgoGray
+import custom_resources.misc.mainScnSpacerW
 import dynamic_boxes.columnBoxesA
 import dynamic_boxes.columnBoxesB
 
@@ -21,7 +21,8 @@ fun mainScreen() {
         Row(modifier = Modifier.fillMaxSize().weight(1f),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically) {
-            lockSwitch(isLocked) { isLocked = it }
+            lockSwitch(isLocked) { isLocked = it
+            }
         }
         Column(modifier = Modifier.fillMaxSize().weight(10f),
             verticalArrangement = Arrangement.Center,
