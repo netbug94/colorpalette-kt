@@ -27,3 +27,6 @@
   
 ![Screenshot from 2024-02-17 15-10-23](https://github.com/olracnai/DynamicColorPalette/assets/135581442/443a13ab-c246-40da-9bc0-cc46e13a5a86)
 </div>
+
+### Future implementations
+- Input format selection (Hex, RBG, and Decimal)
